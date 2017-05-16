@@ -1,0 +1,121 @@
+#add {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 80px;
+    z-index: 999999;
+}
+
+.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+    position: relative !important;
+    margin-bottom: 48px !important;
+}
+
+.mdl-demo section.section--center {
+    max-width: 860px !important;
+}
+
+
+
+
+.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+  font-size: inherit;
+}
+.mdl-demo .mdl-layout__tab-bar-button {
+  display: none;
+}
+.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
+  display: none;
+}
+.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
+.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
+  overflow: visible;
+}
+.mdl-demo .mdl-layout__tab-bar-container {
+  height: 64px;
+}
+
+.mdl-demo main > .mdl-layout__tab-panel {
+  padding: 8px;
+  padding-top: 48px;
+}
+.mdl-demo .mdl-card {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.mdl-demo .mdl-card > * {
+  height: auto;
+}
+.mdl-demo .mdl-card .mdl-card__supporting-text {
+  margin: 40px 40px 0px;
+  flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+}
+.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.mdl-demo .mdl-card__actions {
+  margin: 0;
+  padding: 4px 40px;
+  color: inherit;
+}
+.mdl-demo .mdl-card__actions a {
+  color: #00BCD4;
+  margin: 0;
+}
+.mdl-demo .mdl-card__actions a:hover,
+.mdl-demo .mdl-card__actions a:active {
+  color: inherit;
+  background-color: transparent;
+}
+
+
+
+.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+  position: relative;
+  margin-bottom: 48px;
+}
+.mdl-demo section.section--center {
+  max-width: 700px;
+}
+.mdl-demo #features section.section--center {
+  max-width: 620px;
+}
+.mdl-demo section > header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mdl-demo section > .section__play-btn {
+  min-height: 200px;
+}
+.mdl-demo section > header > .material-icons {
+  font-size: 3rem;
+}
+
+.mdl-demo section > button {
+  position: absolute;
+  z-index: 99;
+  top: 8px;
+  right: 8px;
+}
+
+.mdl-demo section .section__text a {
+  text-decoration: none;
+}
+
+.demo-card-square.mdl-card {
+    width: 230px;
+    height: 250px;
+      padding-right: 20px;
+}
+
+.demo-card-square>.mdl-card__title {
+    padding: 10px;
+}

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.contain {
+  height: 100vh;
+  
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+    border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.2); 
+}

@@ -1,0 +1,8 @@
+<h1>Yuxian Profile</h1>
+<canvas id="user-icon" width="100" height="100" style="border-radius:100%"></canvas>
+<div *ngFor="let info of userInfo">
+    <div>
+        <h3> Hello <span style="font-weight: bold;">{{info.name}} {{info.lastname}} </span></h3>
+        <h4> <span style="font-weight: bold;">{{info.email}}</span></h4>
+    </div>
+</div>

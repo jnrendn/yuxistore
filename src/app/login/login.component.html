@@ -1,0 +1,66 @@
+<!--Login Form-->
+
+<div *ngIf="Login">
+  <h3 class="mdl-dialog__title">Welcome</h3>
+  <div class="mdl-dialog__content">
+    <mdl-textfield  (keyup.enter)="login()" type="text" label="Username" [(ngModel)]="username" floating-label autofocus></mdl-textfield>
+    <mdl-textfield  (keyup.enter)="login()"  type="password" label="Password" [(ngModel)]="password" floating-label></mdl-textfield>
+    <div *ngIf="showSpinner" style="text-align: center">
+      <p>Checking your credentials</p>
+      <mdl-spinner [active]="true"></mdl-spinner>
+    </div>
+
+    <div *ngIf="!showSpinner" style="text-align: center;  color:  #005ecc; ">
+      <span (click)="showRegister()" class="p">Don't have an account?</span>
+      <p (click)="showReset()" class="p">Forgot your password?</p>
+    </div>
+    <div style="text-align: center; ">
+      <span>{{error}}</span>
+    </div>
+
+  </div>
+
+  <div class="mdl-dialog__actions">
+    <button mdl-button (click)="login()" mdl-button-type="raised" mdl-colored="accent" mdl-ripple>Login</button>
+  </div>
+</div>
+
+
+<!--Register Form-->
+
+<div *ngIf="Register">
+  <h5 class="mdl-dialog__title">Sign Up</h5>
+  <div class="mdl-dialog__content">
+    <p>Please complete the form below using your Yuxi email</p>
+    <mdl-textfield type="email" placeholder="example@yuxiglobal.com"  label="Email" [(ngModel)]="email" floating-label autofocus></mdl-textfield>
+    <mdl-textfield type="password" label="Password" [(ngModel)]="pwd" floating-label></mdl-textfield>
+     <mdl-textfield type="password" label="Password again" [(ngModel)]="pwd_r" floating-label></mdl-textfield>
+    <mdl-textfield type="text"  label="Fullname" [(ngModel)]="fullname" floating-label autofocus></mdl-textfield>
+    <mdl-textfield type="phone"  label="Phone number" [(ngModel)]="phone" floating-label autofocus></mdl-textfield>
+    <div style="text-align: center;  color:  #005ecc; ">
+      <span (click)="showLogin()" class="p">  << Go to Login </span>
+    </div>
+  </div>
+  <div class="mdl-dialog__actions">
+    <button mdl-button (click)="signUp()" mdl-button-type="raised" mdl-colored="accent" mdl-ripple>Sign up</button>
+  </div>
+</div>
+
+
+<!--Reset Password Form-->
+
+<div *ngIf="Reset">
+  <div class="mdl-dialog__content">
+    <h3 class="">Reset Password</h3>
+    <mdl-textfield type="email"   label="Email" [(ngModel)]="email_rec" floating-label autofocus></mdl-textfield>
+    <div style="text-align: center;  color:  #005ecc; ">
+      <span (click)="showLogin()" class="p">  << Go to Login </span>
+    </div>
+    <div style="text-align: center; ">
+      <p>{{resetMessage}}</p>
+    </div>
+  </div>
+   <div class="mdl-dialog__actions">
+    <button mdl-button (click)="resetPassword()" mdl-button-type="raised" mdl-colored="accent" mdl-ripple>Send</button>
+  </div>
+</div>

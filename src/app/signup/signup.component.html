@@ -1,0 +1,31 @@
+<div class="form-container">
+    <h3>Welcome to Doña Gloria´s store</h3>
+    <p>Please complete the form below</p>
+    <h6>Use your Yuxi email</h6>
+    <span class="error" *ngIf="error">{{ error }}</span>
+    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">email*</span>
+            <input type="text" class="form-control" placeholder="example@yuxiglobal.com" (ngModel)="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <span  class="input-group-addon" id="basic-addon1">Password*</span>
+            <input type="password" [ngClass]="{'alert':noMatch}" class="form-control" aria-describedby="basic-addon1" (ngModel)="password" name="password" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Confirm pass*</span>
+            <input type="password" [ngClass]="{'alert':noMatch}"  class="form-control" aria-describedby="basic-addon1" (ngModel)="pass" name="pass" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Fullname*</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" (ngModel)="name" name="name" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Phone number*</span>
+            <input type="number" class="form-control" aria-describedby="basic-addon1" (ngModel)="phone" name="phone" required>
+        </div>
+        <h5>fields with (*) are requiered</h5>
+        <button class="btn" type="submit" [disabled]="!formData.valid">Create my account</button>
+    </form>
+    <span><a routerLink="/login">Back</a></span>
+</div>

@@ -1,0 +1,19 @@
+<div>
+  <h3 class="mdl-dialog__title">Nuevo producto</h3>
+  <div class="mdl-dialog__content">
+    <mdl-textfield #firstElement type="text" label="Nombre" [(ngModel)]="name" floating-label autofocus required></mdl-textfield>
+    <br/>
+    <mdl-textfield type="number" label="Precio" [(ngModel)]="price" floating-label></mdl-textfield>
+    <br/>
+    <mdl-textfield type="number" label="Cantidad" [(ngModel)]="cant" floating-label></mdl-textfield>
+    <input class="mdl-textfield__input" id="file" name="file" type="file">
+    <div *ngIf="showSpinner" style="text-align: center">
+      <p>Creando producto</p>
+      <mdl-spinner [active]="true"></mdl-spinner>
+    </div>
+  </div>
+
+  <div class="mdl-dialog__actions">
+    <button mdl-button (click)="createProduct()" mdl-button-type="raised" mdl-colored="accent" mdl-ripple>Crear</button>
+  </div>
+</div>

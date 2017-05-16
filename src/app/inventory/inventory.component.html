@@ -1,0 +1,41 @@
+<div class="mdl-demo  mdl-base">
+  <div class="mdl-grid">
+    <div class="android-section-title mdl-typography--display-1-color-contrast">Inventario - Editar mis productos</div>
+  </div>
+  <div>
+    <main class=" mdl-layout mdl-layout__content">
+      <div class="mdl-layout__tab-panel is-active" id="overview">
+
+        <section init="editing=false" *ngFor="let prod of productService.products | async" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <header style="border-right: 1px dotted #ccc;" class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone">
+            <div class="demo-card-square mdl-card">
+              <div [ngStyle]="{'background': 'url('+prod.productImage+') no-repeat center', 'background-size': 'contain'}" class="mdl-card__title mdl-card--expand">
+              </div>
+            </div>
+          </header>
+          <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card__supporting-text">
+              <!--<h4><mdl-textfield   type="text" label="Product name" [value]="prod.productName" floating-label></mdl-textfield></h4>-->
+              <h4>{{prod.productName}}</h4>
+              <div>
+                <mdl-textfield (keyup.enter)="updateProduct(prod.$key, price.value, quant.value)" #price style="width: 200px; margin-right: 20px;" type="number" label="Precio" [value]="prod.productPrice" floating-label></mdl-textfield>
+                <mdl-textfield (keyup.enter)="updateProduct(prod.$key, price.value, quant.value)" #quant style="width: 200px; margin-right: 20px;" type="number" label="Cantidad" [value]="prod.productCant" floating-label></mdl-textfield>
+              </div>
+            </div>
+            <div class="mdl-card__actions">
+              <button (click)="updateProduct(prod.$key, price.value, quant.value)" class="mdl-button mdl-js-button  mdl-js-ripple-effect mdl-button--accent">Actualizar</button>
+              <button (click)="deleteProduct(prod.$key)" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Eliminar</button>
+              <!--<mdl-switch style="position: absolute; left: 220px; margin-top: 5px;"  [(ngModel)]="this.editing" >Editar</mdl-switch>{{editing}}-->
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+</div>
+
+<button  (click)="openDialog()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+  <i class="material-icons" role="presentation">add</i>
+  <span class="visuallyhidden">Add</span>
+</button>

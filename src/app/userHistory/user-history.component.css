@@ -1,0 +1,246 @@
+
+.date {
+  font-size: 30px;
+  color: purple;
+  background-color: rgba(179, 212, 220, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+ .info{
+   margin: 25px;
+   padding: 10px;
+   text-align: left;
+   border: solid 1px;
+   border-top-color: black;
+   border-radius: 3px;
+   box-shadow: 0 4px 7px 0 rgba(0,0,0,0.1);
+ }
+
+ .total{
+   position: relative;
+   right: 10px;
+   margin: 25px;
+   padding: 10px;
+   font-weight: bold;
+   text-align: left;
+   border: solid 1px;
+   background-color: rgba(0, 200, 0, 0.2);
+   border-radius: 3px;
+   box-shadow: 0 4px 7px 0 rgba(0,0,0,0.1);
+ }
+
+
+
+
+
+
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.25s ease-in-out;
+}
+
+.flipIn, h1, ul li {
+  animation: flipdown 0.5s ease both;
+}
+
+.no-select, h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+@media (max-width: 550px) {
+  body {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+
+h1, h2 {
+  color: #9c26b0;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  background-color: #fefffa;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+
+.priceDate {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  display: block;
+  background-color: #fefffa;
+  margin-top: 7px;
+  cursor: pointer;
+  color: #9c26b0;
+}
+
+.date{
+  font-size: 15px !important;
+  line-height: 14px !important;
+  font-weight: 200 !important;
+  letter-spacing: 1px !important;
+  background-color: #fefffa !important;
+  position: absolute;
+  margin-top: -5px;
+  right: 50px !important;
+  cursor: pointer !important;
+  color: #3b5998 !important;
+}
+
+
+.span-purchase {
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 200;
+  letter-spacing: 0px;
+  border-radius: 50px;
+  color: #334b7c;
+  background-color: rgba(59, 89, 152, 0.2);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+
+}
+
+ul {
+  list-style: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 73px;
+}
+ul li {
+  position: relative;
+  margin: 0;
+  padding-top: 6px;
+  padding-bottom: 0px;
+  border-top: 1px dotted #dce7eb;
+}
+ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+ul li:last-of-type {
+  padding-bottom: 0;
+}
+ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #9c26b0;
+  width: 3px;
+  height: 9px;
+}
+ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+ul li input[type=checkbox]:checked ~ div {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+
+
+#user-prod-cant, #total-prod{
+  color: blueviolet; 
+  position: absolute; 
+  font-size: 14px; 
+  font-weight: 500;
+}
+
+#user-prod-cant {
+  right: 85px; 
+}
+
+#total-prod{
+  right: 5px; 
+}
+
+.amounts {
+  color: #3de809; 
+  font-size: 15px; 
+  position:absolute; 
+  right: 5px; 
+  font-weight: 400;
+}

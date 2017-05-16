@@ -1,0 +1,130 @@
+/*.avatar {
+    position: absolute; 
+    left: 16px; 
+    border-radius:100%; 
+    color: #fff;
+    background-color: #f39c12; 
+    margin-top: 5px; 
+    width: 50px; 
+    height: 50px; 
+    font-family: Arial; 
+    font-size: 24px; 
+    text-align: center; 
+    font-variant-caps: all-petite-caps; 
+    padding-top: 6px;
+}
+
+.user-chip {
+    height: 60px;;
+    width: 320px; 
+    background-color: #fafafa; 
+    margin-bottom: 8px; 
+    border-radius: 50px;
+
+}
+
+.user-chip:hover{
+    cursor: pointer;
+}
+
+
+.user-chip-container{
+    position: absolute; 
+    max-height: 500px;; 
+    overflow-y: auto; 
+    width: 350px; 
+    background-color: #fff; 
+    padding: 0px 60px 20px 10px; 
+}
+
+.paybutton {
+    border: 2px solid #4f1949; 
+    color: #4f1949; 
+    padding: 8px 55px 8px 55px; 
+    text-align: center; 
+    font-weight: 700
+}
+
+.paybutton:hover {
+    background-color: rgba(79, 25, 73, 0.3);
+    color: #fff;
+    cursor: pointer;
+}*/
+
+
+.avatar {
+    position: absolute;
+    left: 16px;
+    border-radius:100%;
+    color: #fff;
+    background-color: #f39c12;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+    font-variant-caps: all-petite-caps;
+    padding-top: 6px;
+}
+.user-chip {
+    height: 60px;;
+    width: 320px;
+    background-color: #fafafa;
+    margin-bottom: 8px;
+    border-radius: 50px;
+}
+.user-chip:hover{
+    cursor: pointer;
+}
+
+.user-chip-container{
+    position: absolute;
+    max-height: 500px;;
+    overflow-y: auto;
+    width: 350px;
+    background-color: #fff;
+    padding: 0px 60px 20px 10px;
+}
+.paybutton {
+    border: 0.5px solid #4f1949;
+    color: #4f1949;
+    padding: 8px 55px 8px 55px;
+    text-align: center;
+    font-weight: 500;
+}
+.paybutton:hover {
+    background-color: #4f1949;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+  .resume{
+    position: relative !important;
+    text-align: center !important;
+    left: 365px !important;
+    margin-top: 20px;
+    padding-bottom: 12px !important;
+    padding-right: 14px !important;
+    padding-left: 0px !important;
+    border: 0.5px solid;
+  }
+  .detail{
+    display: none;
+  }
+  .detail-btn{
+    display: none;
+  }
+}
+.span-purchases{
+  position: relative;
+  top:10px;
+  color: #334b7c;
+  font-size: 18px;
+  padding-left:25px;
+  padding-right: 10px;
+  background-color: rgba(59, 89, 152, 0.2);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}

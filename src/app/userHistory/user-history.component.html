@@ -1,0 +1,29 @@
+
+<ul *ngIf="loggedIn">
+  <li style="padding: 20px 20px 20px 0px;">
+    <span style="font-size: 15px; font-weight: 200;">Total amount: </span> <span class="amounts">COP {{ acumPrice }}</span><br>
+    <span style="font-size: 15px; font-weight: 200;">Total articles: </span> <span class="amounts">{{ acumQuant }}</span>
+  </li>
+  <li *ngFor="let ep of eachPurch; let in = index">
+    <input type="checkbox" checked>
+    <i></i>
+    <span class="priceDate">$ {{arrayPriceByDate[in]}} <span class="date">{{ep.date}}</span></span>
+    <div>
+      <div style="margin-top: 10px;" *ngFor="let purchase of ep.purchases | async; let i=index">
+        <hr>
+        <span class="span-purchase">Purchase #{{i+1}}</span><br>
+        <div>
+          <span style="color: #bbb">Product</span> 
+          <span style="color: #bbb; right: 70px; position: absolute;">Quantity</span> 
+          <span style="color: #bbb; right: 10px; position: absolute;">Total</span>
+        </div>
+        
+        <div style="margin-left: 5px; margin-top: 5px;" *ngFor="let buys of purchase">
+          <span style="font-size: 14px; font-weight: 400;">{{buys.productName}}</span>
+          <span id="user-prod-cant">{{buys.UserproductCant}}</span>
+          <span id="total-prod"> $ {{buys.UserproductCant * buys.productPrice}} </span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,36 @@
+.chip {
+    padding: 0 25px;
+    height: 50px;
+    font-size: 12px;
+    line-height: 50px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    margin-bottom: 8px;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 20%;
+}
+
+.span_unlist_prod {
+    width: 15px;
+    height: 15px;
+    fill: red;
+    float: right;
+    margin-top: 18px;
+}
+
+.span_unlist_prod:hover {
+    cursor: pointer;
+}
+
+.mdl-badge[data-badge]:after {
+    background: rgba(79, 25, 73,0.7) !important;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+}
